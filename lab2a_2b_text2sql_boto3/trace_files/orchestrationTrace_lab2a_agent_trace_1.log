@@ -1,0 +1,9 @@
+{
+  "observation": {
+    "finalResponse": {
+      "text": "Hello, could you please provide your name?"
+    },
+    "traceId": "9d14fa9e-ef07-4e5b-94c2-4c35b76aba71-0",
+    "type": "FINISH"
+  }
+}

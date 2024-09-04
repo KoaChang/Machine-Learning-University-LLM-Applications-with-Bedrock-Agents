@@ -1,0 +1,9 @@
+{
+  "observation": {
+    "finalResponse": {
+      "text": "To design secure VPCs, you should implement the following best practices:\n\n- Plan your network topology to accommodate growth, regulatory compliance, and integration with other networks. Allocate IP addresses to subnets across Availability Zones to ensure availability as you scale (Result 1).\n\n- Control traffic at all layers using security groups, network ACLs, VPC endpoints, AWS PrivateLink, and edge services like CloudFront and AWS WAF (Results 2 and 3).\n\n- Implement authentication and authorization between services using VPC Lattice, mutual TLS, API Gateway, and other mechanisms (Results 4 and 5)."
+    },
+    "traceId": "7267ade8-14bd-461b-bad1-bfd64fb60386-1",
+    "type": "FINISH"
+  }
+}

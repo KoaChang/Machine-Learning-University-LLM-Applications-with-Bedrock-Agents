@@ -1,0 +1,62 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "SQL agents API",
+    "version": "1.0.0",
+    "description": "I can execute valid SQLite query that answers the question based on the [Northwind](https://docs.yugabyte.com/preview/sample-data/northwind/) database and dataset ."
+  },
+  "paths": {
+    "/run-query": {
+      "post": {
+        "summary": "execute the sql queries",
+        "description": "this API can only execute queries against Northwind database",
+        "operationId": "executeSQLQuery",
+        "requestBody": {
+          "description": "SQLite query details",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Query": {
+                    "type": "string",
+                    "description": "SQL Query"
+                  }
+                },
+                  "required": ["Query"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "execute the sql queries",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      
+                      "generatedSQL": {
+                        "type": "string",
+                        "description": "generated SQL from user text"
+                      },
+                     "query_result": {
+                        "type": "string",
+                        "description": "final query result"
+                      }
+                    
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+}
+}

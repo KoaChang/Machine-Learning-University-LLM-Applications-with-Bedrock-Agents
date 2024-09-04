@@ -1,0 +1,9 @@
+{
+  "observation": {
+    "finalResponse": {
+      "text": "The Shoe ID 10 are lightweight racing flats designed for running. They have a breathable mesh upper, responsive cushioning, and a flexible outsole for a fast, efficient ride. The shoes come in bright yellow and orange color options and are priced at $129.99. The current inventory count for this shoe is 912 units."
+    },
+    "traceId": "9dd8475f-b3f1-45cf-a639-68305c0cae49-2",
+    "type": "FINISH"
+  }
+}

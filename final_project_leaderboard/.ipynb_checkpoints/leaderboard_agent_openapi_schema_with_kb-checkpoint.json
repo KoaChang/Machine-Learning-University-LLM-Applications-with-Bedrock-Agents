@@ -1,0 +1,57 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Parser API",
+    "version": "1.0.0",
+    "description": "APIs to PARSE the text from knowledge base searched result to generate the final leaderboard answer."
+  },
+  "paths": {
+    "/parse-kbresult": {
+      "post": {
+        "summary": "PARSE the text from knowledge base searched result to generate the final leaderboard answer.",
+        "description": "this API can only PARSE the text from knowledge base searched result and generate the final leaderboard answer.",
+        "operationId": "parseKnowledgeBaseResult",
+        "requestBody": {
+          "description": "text from knowledge base searched result",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "knowledgeBaseResult": {
+                    "type": "string",
+                    "description": "text from knowledge base searched result"
+                  }
+                },
+               "required": ["knowledgeBaseResult"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "final leaderboard_answer from knowledge base searched result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "leaderboardAnswer": {
+                        "type": "string",
+                        "description": "final leaderboard answer"
+                      }
+                    
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+}
+}
